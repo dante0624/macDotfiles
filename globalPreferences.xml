@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AKLastEmailListRequestDateKey</key>
+	<date>2024-01-10T13:03:41Z</date>
+	<key>AKLastIDMSEnvironment</key>
+	<integer>0</integer>
+	<key>AKLastLocale</key>
+	<string>en_US</string>
+	<key>AppleAntiAliasingThreshold</key>
+	<integer>4</integer>
+	<key>AppleAquaColorVariant</key>
+	<integer>1</integer>
+	<key>AppleInterfaceStyle</key>
+	<string>Dark</string>
+	<key>AppleKeyboardUIMode</key>
+	<integer>2</integer>
+	<key>AppleLanguages</key>
+	<array>
+		<string>en-US</string>
+	</array>
+	<key>AppleLanguagesDidMigrate</key>
+	<string>13.4</string>
+	<key>AppleLanguagesSchemaVersion</key>
+	<integer>3000</integer>
+	<key>AppleLocale</key>
+	<string>en_US</string>
+	<key>AppleMiniaturizeOnDoubleClick</key>
+	<false/>
+	<key>AppleReduceDesktopTinting</key>
+	<false/>
+	<key>AppleShowAllExtensions</key>
+	<true/>
+	<key>KB_DoubleQuoteOption</key>
+	<string>“abc”</string>
+	<key>KB_SingleQuoteOption</key>
+	<string>‘abc’</string>
+	<key>KB_SpellingLanguage</key>
+	<dict>
+		<key>KB_SpellingLanguageIsAutomatic</key>
+		<true/>
+	</dict>
+	<key>NSAutomaticCapitalizationEnabled</key>
+	<true/>
+	<key>NSAutomaticPeriodSubstitutionEnabled</key>
+	<true/>
+	<key>NSLinguisticDataAssetsRequestLastInterval</key>
+	<real>86400</real>
+	<key>NSLinguisticDataAssetsRequestTime</key>
+	<date>2024-01-10T18:09:05Z</date>
+	<key>NSLinguisticDataAssetsRequested</key>
+	<array>
+		<string>en</string>
+	</array>
+	<key>NSLinguisticDataAssetsRequestedByChecker</key>
+	<array>
+		<string>en</string>
+	</array>
+	<key>NSPreferredWebServices</key>
+	<dict>
+		<key>NSWebServicesProviderWebSearch</key>
+		<dict>
+			<key>NSDefaultDisplayName</key>
+			<string>Google</string>
+			<key>NSProviderIdentifier</key>
+			<string>com.google.www</string>
+		</dict>
+	</dict>
+	<key>NSUserDictionaryReplacementItems</key>
+	<array>
+		<dict>
+			<key>on</key>
+			<integer>1</integer>
+			<key>replace</key>
+			<string>omw</string>
+			<key>with</key>
+			<string>On my way!</string>
+		</dict>
+	</array>
+	<key>NSUserKeyEquivalents</key>
+	<dict>
+		<key>Close Tab</key>
+		<string>@q</string>
+		<key>Close Window</key>
+		<string>@e</string>
+		<key>New Tab</key>
+		<string>@t</string>
+		<key>New Window</key>
+		<string>@w</string>
+		<key>Select Next Tab</key>
+		<string>@]</string>
+		<key>Select Previous Tab</key>
+		<string>@[</string>
+	</dict>
+	<key>NSUserQuotesArray</key>
+	<array>
+		<string>“</string>
+		<string>”</string>
+		<string>‘</string>
+		<string>’</string>
+	</array>
+	<key>SyncServicesServerWasActive</key>
+	<true/>
+	<key>_HIHideMenuBar</key>
+	<true/>
+	<key>com.apple.finder.SyncExtensions</key>
+	<dict>
+		<key>collaborationMap</key>
+		<dict/>
+		<key>dirMap</key>
+		<dict/>
+	</dict>
+	<key>com.apple.sound.beep.flash</key>
+	<integer>0</integer>
+	<key>com.apple.springing.delay</key>
+	<real>0.5</real>
+	<key>com.apple.springing.enabled</key>
+	<true/>
+	<key>com.apple.trackpad.forceClick</key>
+	<true/>
+</dict>
+</plist>
