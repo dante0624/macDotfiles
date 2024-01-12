@@ -14,4 +14,4 @@ brew install iterm2
 brew install --cask amethyst
 
 # Install oh-my-zsh but does not update any .zshrc config file or anything
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+sh omz-installer.sh --unattended --keep-zshrc

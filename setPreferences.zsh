@@ -1,3 +1,27 @@
+# Make sure that .zshrc file exists, as we may add things to it
+if ! [ -f "$HOME/.zshrc" ]; then
+	touch "$HOME/.zshrc"
+fi
+
+# Make vim an alias for nvim
+nvimAlias="alias vim='nvim'"
+if  ! grep -q "$nvimAlias" "$HOME/.zshrc" 
+then
+	echo $nvimAlias >> "$HOME/.zshrc" 
+fi
+
+# Set up my neovim config
+if [ ! -e "$HOME/.config/nvim/init.lua" ]
+then
+	git clone "https://github.com/dante0624/nvim_config" "$HOME/.config/nvim/"
+fi
+
+# Append oh-my-zsh preferences to .zshrc if it isn't there yet
+if ! grep -q "oh-my-zsh" "$HOME/.zshrc"
+then
+	cat "omz-preferences.txt" >> "$HOME/.zshrc"
+fi
+
 # Some preferences we are settings can be found in:
 #	1. In the application itself (application menu bar -> settings)
 #	2. Under System Settings -> Keyboard -> Keyboard Shortcuts -> App Shortcuts
@@ -8,21 +32,8 @@ cp globalPreferences.xml globalBinary
 plutil -convert binary1 globalBinary
 mv globalBinary ~/Library/Preferences/.GlobalPreferences.plist
 
-# Set up my neovim config
-if [ ! -e "$HOME/.config/nvim/init.lua" ]
-then
-	git clone "https://github.com/dante0624/nvim_config" "$HOME/.config/nvim/"
-fi
 
-# Make vim an alias for nvim
-nvimAlias="alias vim='nvim'"
-if  ! grep -q "$nvimAlias" "$HOME/.zshrc" 
-then
-	echo $nvimAlias >> "$HOME/.zshrc" 
-fi
-
-
-# Update Iterm
+# Set iTerm Preferences
 # Modify to the application itself and App Shorcuts > iTerm.app
 
 # This shell script must be called from something other than iterm itself!!!
@@ -36,19 +47,12 @@ cp itermPreferences.xml itermBinary
 plutil -convert binary1 itermBinary
 mv itermBinary ~/Library/Preferences/com.googlecode.iterm2.plist
 
-# Update Amethyst preferences
+# Set Amethyst preferences
 cp amethystPreferences.xml amethystBinary
 plutil -convert binary1 amethystBinary
 mv amethystBinary ~/Library/Preferences/com.amethyst.Amethyst.plist
 
-# Append oh-my-zsh config to .zshrc if it isn't there yet
-if ! grep -q "oh-my-zsh" "$HOME/.zshrc"
-then
-	cat "oh-my-zsh-setup.txt" >> "$HOME/.zshrc"
-fi
-
 # Modify misc mac settings
-# Autohiding the menu bar is part of .GlobalPreferences.plist
 defaults write ~/Library/Preferences/com.apple.dock autohide -bool true
 defaults write ~/Library/Preferences/com.apple.dock mru-spaces -bool false
 defaults write ~/Library/Preferences/com.apple.dock expose-group-apps -bool false

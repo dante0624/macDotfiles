@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AKLastEmailListRequestDateKey</key>
-	<date>2024-01-10T13:03:41Z</date>
+	<date>2024-01-12T11:47:46Z</date>
 	<key>AKLastIDMSEnvironment</key>
 	<integer>0</integer>
 	<key>AKLastLocale</key>
@@ -26,6 +26,8 @@
 	<integer>3000</integer>
 	<key>AppleLocale</key>
 	<string>en_US</string>
+	<key>AppleMenuBarVisibleInFullscreen</key>
+	<false/>
 	<key>AppleMiniaturizeOnDoubleClick</key>
 	<false/>
 	<key>AppleReduceDesktopTinting</key>
@@ -48,7 +50,7 @@
 	<key>NSLinguisticDataAssetsRequestLastInterval</key>
 	<real>86400</real>
 	<key>NSLinguisticDataAssetsRequestTime</key>
-	<date>2024-01-10T18:09:05Z</date>
+	<date>2024-01-12T02:54:21Z</date>
 	<key>NSLinguisticDataAssetsRequested</key>
 	<array>
 		<string>en</string>
@@ -94,7 +96,7 @@
 	<key>SyncServicesServerWasActive</key>
 	<true/>
 	<key>_HIHideMenuBar</key>
-	<true/>
+	<false/>
 	<key>com.apple.finder.SyncExtensions</key>
 	<dict>
 		<key>collaborationMap</key>
