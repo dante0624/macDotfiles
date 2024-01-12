@@ -33,6 +33,7 @@ However, installing iTerm2, configuring it, and making it the default terminal w
   * Also updates settings and keybindings for iTerm2 and amethyst
 * Clone's my neovim config from github into the correct location
 * Makes `vim` an alias for `nvim`
+* Makes neovim the default git editor
 * Adds oh-my-zsh configuration to `~/.zshrc`
 * Caveats:
   * For updates to iTerm2 to work, the script must be called from some other terminal (like the built-in terminal)
