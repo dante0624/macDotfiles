@@ -10,6 +10,9 @@ then
 	echo $nvimAlias >> "$HOME/.zshrc" 
 fi
 
+# Make nvim the default editor for git
+git config --global core.editor "nvim"
+
 # Set up my neovim config
 if [ ! -e "$HOME/.config/nvim/init.lua" ]
 then
