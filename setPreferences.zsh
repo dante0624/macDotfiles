@@ -25,6 +25,9 @@ then
 	cat "omz-preferences.txt" >> "$HOME/.zshrc"
 fi
 
+# Create a soft link for my intelliJ vim config
+ln -s "$PWD/ideavim.vim" "$HOME/.ideavimrc"
+
 # Some preferences we are settings can be found in:
 #	1. In the application itself (application menu bar -> settings)
 #	2. Under System Settings -> Keyboard -> Keyboard Shortcuts -> App Shortcuts
