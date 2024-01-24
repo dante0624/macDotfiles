@@ -102,6 +102,7 @@ map <Leader>ai <Action>(CodeInspection.OnEditor)
 map <Leader>d <Action>(ToggleDistractionFreeMode)
 
 " Git Gutter Actions
+map <Leader>gp <Action>(VcsShowCurrentChangeMarker)
 map <Leader>gj <Action>(VcsShowNextChangeMarker)
 map <Leader>gk <Action>(VcsShowPrevChangeMarker)
 map <Leader>gr <Action>(Vcs.RollbackChangedLines)
