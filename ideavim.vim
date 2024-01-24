@@ -1,22 +1,19 @@
 " Documentation available here :https://github.com/JetBrains/ideavim
+" IDE Actions -- List all available with :actionlist
 
 set number
+set relativenumber
 
 " Vanilla Keymaps
 noremap <D-v> <C-v>
+
 let mapleader=" "
 
-" Quicker navigation of single file
+" My remapping for moving far vertically and horizontally
 noremap H ^
 noremap J 020jzz
 noremap K 020kzz
 noremap L $
-
-" Split screen navigation
-noremap <M-h> <C-w>h
-noremap <M-j> <C-w>j
-noremap <M-k> <C-w>k
-noremap <M-l> <C-w>l
 
 " Need to only set these in the editor itself
 " This way it works with Fuzzy Finder and Completion
@@ -25,27 +22,41 @@ noremap <M-l> <C-w>l
 " noremap <D-k> <Up>
 " noremap <D-l> <Right>
 
-" Paste from register 0 instead of the unnamed register, such that we only paste what we yank
+" Only paste what we "yank", not the deleted text
 noremap p "0p
 
 " Make x, only while in visual mode, cut text into register 0
 vnoremap x "0x
 
+" Need to set these in the editor itself as well
+" noremap <D-p> $Paste
+" noremap <D-y> $Copy
+" noremap <D-x> $Cut
+
 " Intuitive tab indentation
 vnoremap <TAB> >gv
 vnoremap <S-TAB> <gv
 
+" Write content quickly
+map <Leader>w <Action>(SaveDocument)
+map <Leader>W <Action>(SaveAll)
+
+" Write content quickly
+map <Leader>e <Action>(CloseContent)
+map <Leader>E <Action>(CloseAllToTheRight)
+
+" Switch between windows quickly
+noremap <Leader>h <C-w>h
+noremap <Leader>j <C-w>j
+noremap <Leader>k <C-w>k
+noremap <Leader>l <C-w>l
+
 " Easier redo command
 noremap R <C-r>
 
-" Easier way to add one to a number
-map <Leader>a <C-a>
-
-" IDE Actions -- List all available with :actionlist
-map <Leader>w <Action>(SaveDocument)
-map <Leader>W <Action>(SaveAll)
-map <Leader>e <Action>(CloseContent)
-map <Leader>E <Action>(CloseAllToTheRight)
+" Easier way to add or subtract one from a number
+noremap <Leader>i <C-a>
+noremap <Leader>I <C-x>
 
 " Quickly Select Tabs
 map <D-a> <Action>(GoToTab1)
@@ -73,31 +84,28 @@ map zo <Action>(ExpandRegion)
 map zR <Action>(ExpandAllRegions)
 map za <Action>(ExpandCollapseToggleAction)
 
-" LSP and Diagnostic Actions
-map <Leader>lr <Action>(RenameElement)
+" LSP "Actions" and Diagnostic Actions
 map gd <Action>(GotoImplementation)
 map gD <Action>(GotoTypeDeclaration)
 map gr <Action>(GotoDeclaration)
-map <Leader>lh <Action>(QuickJavaDoc)
-map <Leader>li <Action>(CodeInspection.OnEditor)
-map <Leader>dj <Action>(GotoNextError)
-map <Leader>dk <Action>(GotoPreviousError)
-map <Leader>do <Action>(ShowErrorDescription)
+map <Leader>aj <Action>(GotoNextError)
+map <Leader>ak <Action>(GotoPreviousError)
+map <Leader>ao <Action>(ShowErrorDescription)
+map <Leader>ah <Action>(QuickJavaDoc)
+map <Leader>ar <Action>(RenameElement)
 
-" Toggle the heads-up-display around the main editor
-map <Leader>h <Action>(ToggleDistractionFreeMode)
+" JetBrains specific actions
+map <Leader>af <Action>(ShowIntentionActions)
+map <Leader>ai <Action>(CodeInspection.OnEditor)
+
+" Toggle distraction free mode
+map <Leader>d <Action>(ToggleDistractionFreeMode)
 
 " Git Gutter Actions
 map <Leader>gj <Action>(VcsShowNextChangeMarker)
 map <Leader>gk <Action>(VcsShowPrevChangeMarker)
 map <Leader>gr <Action>(Vcs.RollbackChangedLines)
 map <Leader>gd <Action>(Vcs.ShowDiffChangedLines)
-
-" EasyMotion Plugin
-set easymotion
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>; <Plug>(easymotion-bd-f)
 
 " NERDTree
 set NERDTree
