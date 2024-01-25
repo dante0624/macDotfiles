@@ -98,8 +98,10 @@ map <Leader>ar <Action>(RenameElement)
 map <Leader>af <Action>(ShowIntentionActions)
 map <Leader>ai <Action>(CodeInspection.OnEditor)
 
-" Toggle distraction free mode
-map <Leader>d <Action>(ToggleDistractionFreeMode)
+" Toggle certain HUD display settings
+map <Leader>dl :set number!<CR>
+map <Leader>dr :set relativenumber!<CR>
+map <Leader>dd <Action>(ToggleDistractionFreeMode)
 
 " Git Gutter Actions
 map <Leader>gp <Action>(VcsShowCurrentChangeMarker)
