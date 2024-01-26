@@ -59,8 +59,8 @@ plutil -convert binary1 amethystBinary
 mv amethystBinary ~/Library/Preferences/com.amethyst.Amethyst.plist
 
 # Modify misc mac settings
-defaults write ~/Library/Preferences/com.apple.dock autohide -bool true
-defaults write ~/Library/Preferences/com.apple.dock mru-spaces -bool false
-defaults write ~/Library/Preferences/com.apple.dock expose-group-apps -bool false
-defaults write ~/Library/Preferences/com.apple.spaces spans-displays -bool true
-
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock mru-spaces -bool false
+defaults write com.apple.dock expose-group-apps -bool false
+defaults write com.apple.spaces spans-displays -bool true
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
