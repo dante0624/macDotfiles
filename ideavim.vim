@@ -3,6 +3,8 @@
 
 set number
 set relativenumber
+set ignorecase
+set smartcase
 
 " Vanilla Keymaps
 noremap <D-v> <C-v>
