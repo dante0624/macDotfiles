@@ -11,18 +11,18 @@ noremap <D-v> <C-v>
 
 let mapleader=" "
 
-" My remapping for moving far vertically and horizontally
-noremap H ^
-noremap J 020jzz
-noremap K 020kzz
-noremap L $
-
 " Need to only set these in the editor itself
 " This way it works with Fuzzy Finder and Completion
 " noremap <D-h> <Left>
 " noremap <D-j> <Down>
 " noremap <D-k> <Up>
 " noremap <D-l> <Right>
+
+" My remapping for moving far vertically and horizontally
+noremap H ^
+noremap J 020jzz
+noremap K 020kzz
+noremap L $
 
 " Only paste what we "yank", not the deleted text
 noremap p "0p
@@ -61,11 +61,11 @@ noremap <Leader>i <C-a>
 noremap <Leader>I <C-x>
 
 " Quickly Select Tabs
-map <D-a> <Action>(GoToTab1)
-map <D-s> <Action>(GoToTab2)
-map <D-d> <Action>(GoToTab3)
-map <D-f> <Action>(GoToTab4)
-map <D-g> <Action>(GoToTab5)
+map <Leader>oa <Action>(GoToTab1)
+map <Leader>os <Action>(GoToTab2)
+map <Leader>od <Action>(GoToTab3)
+map <Leader>of <Action>(GoToTab4)
+map <Leader>og <Action>(GoToTab5)
 
 " Fuzzy Finder Actions
 map <Leader>f <Action>(GotoFile)
@@ -106,7 +106,7 @@ map <Leader>dr :set relativenumber!<CR>
 map <Leader>dd <Action>(ToggleDistractionFreeMode)
 
 " Git Gutter Actions
-map <Leader>gp <Action>(VcsShowCurrentChangeMarker)
+map <Leader>go <Action>(VcsShowCurrentChangeMarker)
 map <Leader>gj <Action>(VcsShowNextChangeMarker)
 map <Leader>gk <Action>(VcsShowPrevChangeMarker)
 map <Leader>gr <Action>(Vcs.RollbackChangedLines)
