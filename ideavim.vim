@@ -2,7 +2,6 @@
 " IDE Actions -- List all available with :actionlist
 
 set number
-set relativenumber
 set ignorecase
 set smartcase
 
@@ -117,3 +116,9 @@ set NERDTree
 map <Leader>to :NERDTree<CR>
 map <Leader>tp :NERDTreeFind<CR>
 map <Leader>tq :NERDTreeClose<CR>
+
+" Easy Motion
+set easymotion
+map <Leader>;j <Plug>(easymotion-j)
+map <Leader>;k <Plug>(easymotion-k)
+map ; <Plug>(easymotion-bd-f2)
