@@ -3,15 +3,12 @@ if ! [ -f "$HOME/.zshrc" ]; then
 	touch "$HOME/.zshrc"
 fi
 
-# Make vim an alias for nvim
-nvimAlias="alias vim='nvim'"
-if  ! grep -q "$nvimAlias" "$HOME/.zshrc" 
+# Tell .zshrc to source a file that has my ZShell Preferences
+shellPreferences="source \"$(find ~+ -type f -name 'shellPreferences.zsh')\""
+if ! grep -q "$shellPreferences" "$HOME/.zshrc"
 then
-	echo $nvimAlias >> "$HOME/.zshrc" 
+  echo $shellPreferences >> "$HOME/.zshrc"
 fi
-
-# Make nvim the default editor for git
-git config --global core.editor "nvim"
 
 # Set up my neovim config
 if [ ! -e "$HOME/.config/nvim/init.lua" ]
@@ -19,14 +16,15 @@ then
 	git clone "https://github.com/dante0624/nvim_config" "$HOME/.config/nvim/"
 fi
 
-# Append oh-my-zsh preferences to .zshrc if it isn't there yet
-if ! grep -q "oh-my-zsh" "$HOME/.zshrc"
-then
-	cat "omz-preferences.txt" >> "$HOME/.zshrc"
-fi
+# Make nvim the default editor for git
+git config --global core.editor "nvim"
 
 # Create a soft link for my intelliJ vim config
-ln -s "$PWD/ideavim.vim" "$HOME/.ideavimrc"
+ideavimPreferences=$(find ~+ -type f -name "ideavim.vim")
+if [ ! -e "$HOME/.ideavimrc" ]
+then
+  ln -s $ideavimPreferences "$HOME/.ideavimrc"
+fi
 
 # Some preferences we are settings can be found in:
 #	1. In the application itself (application menu bar -> settings)
