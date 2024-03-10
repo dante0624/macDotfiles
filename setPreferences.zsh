@@ -21,10 +21,7 @@ git config --global core.editor "nvim"
 
 # Create a soft link for my intelliJ vim config
 ideavimPreferences=$(find ~+ -type f -name "ideavim.vim")
-if [ ! -e "$HOME/.ideavimrc" ]
-then
-  ln -s $ideavimPreferences "$HOME/.ideavimrc"
-fi
+ln -sf $ideavimPreferences "$HOME/.ideavimrc"
 
 # Ovwrite several preferences, saved as Plists at ~/Library/Preferences/
 # Some preferences we are overwritting also have a GUI found at:
