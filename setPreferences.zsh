@@ -36,19 +36,22 @@ fi
 # Need to restart computer for changes to be seen
 
 # Modify Keyboard Shortcuts -> App Shortcuts -> All Applications
-cp globalPreferences.xml globalBinary
+globalPreferences=$(find ~+ -type f -name "globalPreferences.xml")
+cp $globalPreferences globalBinary
 plutil -convert binary1 globalBinary
 mv globalBinary ~/Library/Preferences/.GlobalPreferences.plist
 
 # Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control)
-cp hotKeys.xml hotKeysBinary
+hotKeys=$(find ~+ -type f -name "hotKeys.xml")
+cp $hotKeys hotKeysBinary
 plutil -convert binary1 hotKeysBinary
 mv hotKeysBinary ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 
 # Set iTerm Preferences
 # This shell script must be called from something other than iterm itself!!!
-cp itermPreferences.xml itermBinary
+itermPreferences=$(find ~+ -type f -name "itermPreferences.xml")
+cp $itermPreferences itermBinary
 plutil -convert binary1 itermBinary
 mv itermBinary ~/Library/Preferences/com.googlecode.iterm2.plist
 # Iterm keeps its prefernces in RAM and when you close iTerm they get written
@@ -59,7 +62,8 @@ mv itermBinary ~/Library/Preferences/com.googlecode.iterm2.plist
 # 3. iTerm closes and saves the default settings back onto the hard drive
 
 # Set Amethyst preferences
-cp amethystPreferences.xml amethystBinary
+amethystPreferences=$(find ~+ -type f -name "amethystPreferences.xml")
+cp $amethystPreferences amethystBinary
 plutil -convert binary1 amethystBinary
 mv amethystBinary ~/Library/Preferences/com.amethyst.Amethyst.plist
 
@@ -69,3 +73,12 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock expose-group-apps -bool false
 defaults write com.apple.spaces spans-displays -bool true
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+
+# Copy Launch Agents to the correct destination, so they begin on startup
+amethystAgent=$(find ~+ -type f -name "startAmethyst.xml")
+cp $amethystAgent ~/Library/LaunchAgents/personal.startAmethyst.plist
+
+swapEscAndCapsLockAgent=$(find ~+ -type f -name "swapEscAndCapsLock.xml")
+cp $swapEscAndCapsLockAgent ~/Library/LaunchAgents/personal.swapEscAndCapsLock.plist
+
