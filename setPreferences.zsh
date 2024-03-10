@@ -26,30 +26,37 @@ then
   ln -s $ideavimPreferences "$HOME/.ideavimrc"
 fi
 
-# Some preferences we are settings can be found in:
-#	1. In the application itself (application menu bar -> settings)
-#	2. Under System Settings -> Keyboard -> Keyboard Shortcuts -> App Shortcuts
+# Ovwrite several preferences, saved as Plists at ~/Library/Preferences/
+# Some preferences we are overwritting also have a GUI found at:
+#	1. System Settings -> Keyboard -> Keyboard Shortcuts
+#	2. In the application itself (application menu bar -> settings)
 
-# Modify Appy Shortcuts -> All Applications
+
+# First change general Mac Settings 
 # Need to restart computer for changes to be seen
+
+# Modify Keyboard Shortcuts -> App Shortcuts -> All Applications
 cp globalPreferences.xml globalBinary
 plutil -convert binary1 globalBinary
 mv globalBinary ~/Library/Preferences/.GlobalPreferences.plist
 
+# Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control)
+cp hotKeys.xml hotKeysBinary
+plutil -convert binary1 hotKeysBinary
+mv hotKeysBinary ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 
 # Set iTerm Preferences
-# Modify to the application itself and App Shorcuts > iTerm.app
-
 # This shell script must be called from something other than iterm itself!!!
+cp itermPreferences.xml itermBinary
+plutil -convert binary1 itermBinary
+mv itermBinary ~/Library/Preferences/com.googlecode.iterm2.plist
 # Iterm keeps its prefernces in RAM and when you close iTerm they get written
 
 # So if you open iTerm, run this script, then close iTerm it will:
 # 1. loads the default settings from the hard drive into RAM
 # 2. A user runs the script, which updates only the hard drive
 # 3. iTerm closes and saves the default settings back onto the hard drive
-cp itermPreferences.xml itermBinary
-plutil -convert binary1 itermBinary
-mv itermBinary ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # Set Amethyst preferences
 cp amethystPreferences.xml amethystBinary
