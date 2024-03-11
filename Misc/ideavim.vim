@@ -85,6 +85,11 @@ map zo <Action>(ExpandRegion)
 map zR <Action>(ExpandAllRegions)
 map za <Action>(ExpandCollapseToggleAction)
 
+" Searching For Words
+set hlsearch
+noremap <Leader>n :noh<CR>
+noremap gn *N
+
 " LSP "Actions" and Diagnostic Actions
 map gd <Action>(GotoImplementation)
 map gD <Action>(GotoTypeDeclaration)
