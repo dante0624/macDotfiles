@@ -8,7 +8,9 @@ alias vim='nvim'
 export ZSH="$HOME/.oh-my-zsh"
 
 # Standard plugins can be found in $ZSH/plugins/
-plugins=(git)
+plugins=(git aws)
+
+SHOW_AWS_PROMPT=false
 
 # Runs oh-my-zsh
 source $ZSH/oh-my-zsh.sh
