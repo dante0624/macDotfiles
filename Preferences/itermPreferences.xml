@@ -78,19 +78,21 @@
 		<string>@$v</string>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 81 224 278 0 0 1470 919 </string>
+	<string>0 81 224 278 0 0 1512 944 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>520 543 430 195 0 0 1470 919 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>212 498 735 388 0 0 1470 919 </string>
+	<string>224 521 735 388 0 0 1512 944 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>0 784 400 135 0 0 1470 919 </string>
+	<string>0 809 400 135 0 0 1512 944 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>425 390 620 398 0 0 1470 919 </string>
+	<string>446 409 620 398 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1470 919 0 0 1470 919 </string>
+	<string>0 24 1512 920 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 1470 919 0 0 1470 919 </string>
+	<string>0 0 1512 944 0 0 1512 944 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NeverWarnAboutShortLivedSessions_90688C6C-0DCE-4502-9A2C-1DF73BA7C049</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_90688C6C-0DCE-4502-9A2C-1DF73BA7C049_selection</key>
@@ -367,28 +369,6 @@
 					<key>Version</key>
 					<integer>1</integer>
 				</dict>
-				<key>0x62-0x100000-0xb</key>
-				<dict>
-					<key>Action</key>
-					<integer>38</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>\&lt;C-b&gt;</string>
-					<key>Version</key>
-					<integer>1</integer>
-				</dict>
-				<key>0x66-0x100000-0x3</key>
-				<dict>
-					<key>Action</key>
-					<integer>38</integer>
-					<key>Label</key>
-					<string></string>
-					<key>Text</key>
-					<string>\&lt;C-f&gt;</string>
-					<key>Version</key>
-					<integer>1</integer>
-				</dict>
 				<key>0x68-0x100000-0x4</key>
 				<dict>
 					<key>Action</key>
@@ -443,6 +423,32 @@
 					<string>\&lt;C-p&gt;</string>
 					<key>Version</key>
 					<integer>1</integer>
+				</dict>
+				<key>0x72-0x100000-0xf</key>
+				<dict>
+					<key>Action</key>
+					<integer>38</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string>\&lt;C-r&gt;</string>
+					<key>Version</key>
+					<integer>2</integer>
+				</dict>
+				<key>0x73-0x100000-0x1</key>
+				<dict>
+					<key>Action</key>
+					<integer>38</integer>
+					<key>Apply Mode</key>
+					<integer>0</integer>
+					<key>Escaping</key>
+					<integer>2</integer>
+					<key>Text</key>
+					<string>\&lt;C-s&gt;</string>
+					<key>Version</key>
+					<integer>2</integer>
 				</dict>
 				<key>0x74-0x100000-0x11</key>
 				<dict>
@@ -688,7 +694,9 @@
 	<array>
 		<string>3.4.23</string>
 		<string>3.4.20</string>
+		<string>3.5.0beta19</string>
 		<string>3.4.21</string>
+		<string>3.5.0</string>
 		<string>3.4.22</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -699,9 +707,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1470, 956}}</string>
+		<string>{{0, 0}, {1512, 982}}</string>
 		<key>topLeft</key>
-		<string>{230, 726}</string>
+		<string>{294, 723}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -710,11 +718,11 @@
 	<key>NoSyncInstallationId</key>
 	<string>B3EBBCD3-0C32-4771-A7B0-71B6641F4BE8</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 13.4 (Build 22F66)</string>
+	<string>Version 14.4.1 (Build 23E224)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>18</integer>
+	<integer>34</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>716588766.32712901</real>
 	<key>NoSyncPermissionToShowTip</key>
@@ -794,6 +802,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>homeDirectory</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>jobName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -811,6 +827,14 @@
 				<true/>
 				<key>name</key>
 				<string>tab.tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>uname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -850,7 +874,23 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>mouseInfo</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>shell</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1042,7 +1082,31 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>effective_root_pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>autoNameFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>sshIntegrationLevel</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>parentSession.bellCount</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1075,6 +1139,14 @@
 				<true/>
 				<key>name</key>
 				<string>commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>applicationKeypad</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1149,6 +1221,22 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.mouseInfo</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.parentSession.bellCount</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1158,6 +1246,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>isHotkeyWindow</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1286,6 +1382,14 @@
 				<true/>
 				<key>name</key>
 				<string>titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.effective_root_pid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1538,6 +1642,10 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>716011597.35612202</real>
+	<key>NoSyncUserHasSelectedCommand</key>
+	<true/>
+	<key>NoSyncWindowRestoresWorkspaceAtLaunch</key>
+	<false/>
 	<key>PasteSpecialChunkDelay</key>
 	<real>0.01</real>
 	<key>PasteSpecialChunkSize</key>
@@ -1581,6 +1689,8 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>PreventEscapeSequenceFromClearingHistory</key>
+	<false/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
@@ -1594,11 +1704,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2024-03-08T14:36:10Z</date>
+	<date>2024-06-06T13:59:17Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>3482973623</integer>
+	<integer>1669321245</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1616,6 +1726,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.4.23</string>
+	<string>3.5.0</string>
 </dict>
 </plist>
