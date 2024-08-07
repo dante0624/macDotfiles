@@ -9,6 +9,9 @@ brew install fd
 # Install neovim
 brew install neovim
 
+# Install tmux
+brew install tmux
+
 # Install Mac Specific Stuff
 brew install iterm2
 brew install --cask amethyst
