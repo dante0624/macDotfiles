@@ -8,7 +8,7 @@ alias vim='nvim'
 export ZSH="$HOME/.oh-my-zsh"
 
 # Standard plugins can be found in $ZSH/plugins/
-plugins=(git aws)
+plugins=(git aws tmux)
 
 SHOW_AWS_PROMPT=false
 
