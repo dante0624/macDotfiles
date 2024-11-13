@@ -15,6 +15,24 @@ SHOW_AWS_PROMPT=false
 # Runs oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Helper functions
+function all-windows() {
+	current_session=$(tmux display -p "#S")
+
+	# Get all arguments as a normal string, separated by spaces
+	command=""
+	for arg in "$@"; do
+		command="$command $arg"
+	done
+	command="${command:1}" # Remove leading space
+
+	# Get all window ids, and for each send the command and then hit Enter
+	tmux list-windows | \
+		cut -d: -f1 | \
+		xargs -I{} tmux send-keys -t "$current_session:{}" $command Enter
+}
+
+
 # My Custom Theme, modified colors to mortalscumbag
 # All themes can be found under ~/.oh-my-zsh/themes
 function my_git_prompt() {
