@@ -15,6 +15,12 @@ SHOW_AWS_PROMPT=false
 # Runs oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Overwrite git aliases for git log
+# Limited to 10 lines
+alias glo='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" -n 10'
+# Longer
+alias glol='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"'
+
 # Helper functions
 function all-windows() {
 	current_session=$(tmux display -p "#S")
