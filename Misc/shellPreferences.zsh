@@ -49,13 +49,15 @@ function my_git_prompt() {
   STATUS=""
 
   # is branch ahead?
-  if $(echo "$(git log origin/$(git_current_branch)..HEAD 2> /dev/null)" | grep '^commit' &> /dev/null); then
-    STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD"
+  NUM_COMMITS_AHEAD=$(git_commits_ahead)
+  if [ -n "${NUM_COMMITS_AHEAD}" ]; then
+    STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$NUM_COMMITS_AHEAD"
   fi
 
   # is branch behind?
-  if $(echo "$(git log HEAD..origin/$(git_current_branch) 2> /dev/null)" | grep '^commit' &> /dev/null); then
-    STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND"
+  NUM_COMMITS_BEHIND=$(git_commits_behind)
+  if [ -n "${NUM_COMMITS_BEHIND}" ]; then
+    STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$NUM_COMMITS_BEHIND"
   fi
 
   # is anything staged?
