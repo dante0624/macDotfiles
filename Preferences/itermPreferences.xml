@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AllowClipboardAccess</key>
-	<true/>
+	<false/>
+	<key>AlternateMouseScroll</key>
+	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -22,6 +24,12 @@
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>90688C6C-0DCE-4502-9A2C-1DF73BA7C049</string>
+	<key>DisableFullscreenTransparency</key>
+	<false/>
+	<key>DisableWindowSizeSnap</key>
+	<false/>
+	<key>DoubleReportScrollWheel</key>
+	<false/>
 	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>GlobalKeyMap</key>
@@ -31,6 +39,8 @@
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideScrollbar</key>
+	<true/>
+	<key>HideTab</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
@@ -76,16 +86,20 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>520 543 430 195 0 0 1470 919 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>224 521 735 388 0 0 1512 944 </string>
+	<string>391 389 735 388 0 0 1512 944 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>0 809 400 135 0 0 1512 944 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>446 409 620 398 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1512 -98 1920 1080 1512 -98 1920 1080 </string>
+	<string>0 465 810 479 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>695 982 2560 1440 695 982 2560 1440 </string>
+	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
+	<string>0 465 810 479 0 0 1512 944 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>0 0 1512 944 0 0 1512 944 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
 	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NeverWarnAboutShortLivedSessions_90688C6C-0DCE-4502-9A2C-1DF73BA7C049</key>
 	<true/>
@@ -725,14 +739,18 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.4.23</string>
-		<string>3.4.20</string>
-		<string>3.4.21</string>
-		<string>3.4.22</string>
-		<string>3.5.1</string>
 		<string>3.5.3</string>
-		<string>3.5.0</string>
+		<string>3.5.12</string>
+		<string>3.5.1</string>
+		<string>3.5.11</string>
+		<string>3.4.23</string>
+		<string>3.5.10</string>
+		<string>3.4.22</string>
+		<string>3.5.4</string>
 		<string>3.5.2</string>
+		<string>3.4.21</string>
+		<string>3.5.0</string>
+		<string>3.4.20</string>
 		<string>3.5.0beta19</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
@@ -743,16 +761,16 @@
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1512, -98}, {1920, 1080}}</string>
+		<string>{{0, 0}, {1512, 982}}</string>
 		<key>topLeft</key>
-		<string>{2161, 850}</string>
+		<string>{294, 723}</string>
 	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1512, 982}}</string>
 		<key>topLeft</key>
-		<string>{294, 723}</string>
+		<string>{293, 723}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -761,15 +779,23 @@
 	<key>NoSyncInstallationId</key>
 	<string>B3EBBCD3-0C32-4771-A7B0-71B6641F4BE8</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 14.6 (Build 23G80)</string>
+	<string>Version 15.3.2 (Build 24D81)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>51</integer>
+	<integer>98</integer>
+	<key>NoSyncNeverAllowPaste</key>
+	<true/>
+	<key>NoSyncNeverAskAboutMouseReportingFrustration</key>
+	<true/>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>716588766.32712901</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncPermissionsHelper_Accessibility</key>
+	<string>3.5.11</string>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -1692,6 +1718,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncRemoveDeprecatedKeyMappings</key>
+	<integer>1</integer>
 	<key>NoSyncRestoreWindowsCount</key>
 	<integer>0</integer>
 	<key>NoSyncSavePanelSavedSettings_SaveProfile</key>
@@ -1700,6 +1728,8 @@
 		<string>/Users/dante</string>
 	</dict>
 	<key>NoSyncScrollingHorizontally</key>
+	<true/>
+	<key>NoSyncSuppressClipboardAccessDeniedWarning</key>
 	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>716011597.35612202</real>
@@ -1765,17 +1795,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2024-08-07T01:25:06Z</date>
+	<date>2025-04-07T13:53:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUSkippedVersion</key>
-	<string>3.5.3</string>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>1669321245</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
@@ -1789,6 +1817,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.5.3</string>
+	<string>3.5.12</string>
 </dict>
 </plist>
