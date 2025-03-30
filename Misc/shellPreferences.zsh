@@ -16,9 +16,9 @@ SHOW_AWS_PROMPT=false
 source $ZSH/oh-my-zsh.sh
 
 # Overwrite git aliases for git log
-# Limited to 10 lines
-alias glo='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" -n 10'
-# Longer
+# Limited to 10 lines, so don't use a pager
+alias glo='git --no-pager log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" -n 10'
+# Longer, with a pager if needed
 alias glol='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"'
 
 # Helper functions
