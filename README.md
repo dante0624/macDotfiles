@@ -2,9 +2,7 @@
 
 ## Overview and Scope
 Makes it easy for me to automatically synchronize my very specific settings between multiple macbooks.
-The specific settings which it synchronizes are primarily aimed at editing in terminal.
-As such, doing things like installing Google Chrome and making it the default browser are not a priority.
-However, installing iTerm2, configuring it, and making it the default terminal would be a priority.
+The specific settings which it synchronizes are primarily aimed at making keyboard shortcuts work exactly how I want.
 
 ## Bootstrapping a brand-new Macbook
 * Install homebrew and git

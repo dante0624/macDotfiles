@@ -12,6 +12,9 @@ brew install neovim
 # Install tmux
 brew install tmux
 
+# Install firefox
+brew install --cask firefox
+
 # Install Mac Specific Stuff
 brew install iterm2
 brew install --cask amethyst

@@ -1,0 +1,20 @@
+/*
+In firefox 136.0.4, the TabsToolbar has a few things:
+	- MacOS window controls
+	- A button to "View recent browsing across windows and devices"
+	- Horizontal Tabs
+	- A button to "Open a new tab"
+	- The "alltabs-button" for searching tabs and opening new tabs in containers
+
+I find MacOS window controls useless in general.
+With the TreeStyleTabs plugin, I consider the rest useless.
+So, collapse the whole thing.
+*/
+#TabsToolbar {
+	visibility: collapse;
+}
+
+/* The TST Sidebar has a big header that says "Tree Style Tab". I Don't want it */
+#sidebar-header {
+	visibility: collapse;
+}
