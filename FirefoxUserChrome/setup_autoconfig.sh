@@ -1,5 +1,5 @@
 FIREFOX_DIR="/Applications/Firefox.app/Contents/Resources"
-AUTOCONFIG_DIR="/Users/dante/macDotfiles/FirefoxUserChrome"
+AUTOCONFIG_DIR="$HOME/macDotfiles/FirefoxUserChrome"
 
 # Link userChrome.js
 ln -s -f "$AUTOCONFIG_DIR/userChrome.js" "$FIREFOX_DIR/userChrome.js"
