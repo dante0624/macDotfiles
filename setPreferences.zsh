@@ -11,10 +11,9 @@ then
 fi
 
 # Set up my tmux config
-if [ ! -e "$HOME/.config/tmux/tmux.conf" ]
-then
-	git clone "https://github.com/dante0624/tmux_config" "$HOME/.config/tmux/"
-fi
+tmuxConfig=$(find ~+ -type f -name "tmux.conf")
+mkdir -p "$HOME/.config/tmux"
+ln -sf $tmuxConfig "$HOME/.config/tmux/tmux.conf"
 
 # Set up my neovim config
 if [ ! -e "$HOME/.config/nvim/init.lua" ]
