@@ -69,6 +69,12 @@ cp $amethystPreferences amethystBinary
 plutil -convert binary1 amethystBinary
 mv amethystBinary ~/Library/Preferences/com.amethyst.Amethyst.plist
 
+# Set Xquartz preferences (don't begin xterm on startup)
+xquartzPreferences=$(find ~+ -type f -name "xquartzPreferences.xml")
+cp $xquartzPreferences xquartzBinary
+plutil -convert binary1 xquartzBinary
+mv xquartzBinary ~/Library/Preferences/org.xquartz.X11.plist
+
 # Modify misc mac settings
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock mru-spaces -bool false
@@ -83,4 +89,8 @@ cp $amethystAgent ~/Library/LaunchAgents/personal.startAmethyst.plist
 
 swapEscAndCapsLockAgent=$(find ~+ -type f -name "swapEscAndCapsLock.xml")
 cp $swapEscAndCapsLockAgent ~/Library/LaunchAgents/personal.swapEscAndCapsLock.plist
+
+xquartzWakeupScript=$(find ~+ -type f -name "xquartz_wakeup.sh")
+xquartzAgent=$(find ~+ -type f -name "startXquartz.xml")
+sed "s#PATH_TO_WAKEUP_SCRIPT#$xquartzWakeupScript#" $xquartzAgent > ~/Library/LaunchAgents/personal.startXquartz.plist
 

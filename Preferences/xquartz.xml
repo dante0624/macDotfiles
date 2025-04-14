@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSUserKeyEquivalents</key>
+	<dict>
+		<key>Zoom</key>
+		<string>@f</string>
+	</dict>
+	<key>NSWindow Frame x11_apps</key>
+	<string>261 391 454 299 0 0 1512 944 </string>
+	<key>NSWindow Frame x11_prefs</key>
+	<string>244 364 484 336 0 0 1512 944 </string>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2025-04-13T17:47:34Z</date>
+	<key>app_to_run</key>
+	<string>/usr/bin/true</string>
+	<key>cache_fonts</key>
+	<true/>
+	<key>done_xinit_check</key>
+	<true/>
+	<key>enable_iglx</key>
+	<false/>
+	<key>fullscreen_menu</key>
+	<true/>
+	<key>login_shell</key>
+	<string>/bin/sh</string>
+	<key>no_auth</key>
+	<false/>
+	<key>nolisten_tcp</key>
+	<false/>
+	<key>rootless</key>
+	<true/>
+	<key>startx_script</key>
+	<string>/opt/X11/bin/startx -- /opt/X11/bin/Xquartz</string>
+</dict>
+</plist>
