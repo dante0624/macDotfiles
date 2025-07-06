@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -92,11 +92,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>446 409 620 398 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 465 810 479 0 0 1512 944 </string>
+	<string>0 9 1510 935 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 465 810 479 0 0 1512 944 </string>
+	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>0 0 1512 944 0 0 1512 944 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -317,7 +317,7 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
-			<true/>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -739,6 +739,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.5.0beta19</string>
 		<string>3.5.3</string>
 		<string>3.5.12</string>
 		<string>3.5.1</string>
@@ -749,9 +750,10 @@
 		<string>3.5.4</string>
 		<string>3.5.2</string>
 		<string>3.4.21</string>
+		<string>3.5.14</string>
 		<string>3.5.0</string>
 		<string>3.4.20</string>
-		<string>3.5.0beta19</string>
+		<string>3.5.13</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -779,13 +781,13 @@
 	<key>NoSyncInstallationId</key>
 	<string>B3EBBCD3-0C32-4771-A7B0-71B6641F4BE8</string>
 	<key>NoSyncLastOSVersion</key>
-	<string>Version 15.3.2 (Build 24D81)</string>
+	<string>Version 15.5 (Build 24F74)</string>
 	<key>NoSyncLastSystemPythonVersionRequirement</key>
 	<string>1.17</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>98</integer>
+	<integer>110</integer>
 	<key>NoSyncNeverAllowPaste</key>
-	<true/>
+	<false/>
 	<key>NoSyncNeverAskAboutMouseReportingFrustration</key>
 	<true/>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
@@ -1795,7 +1797,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2025-04-07T13:53:03Z</date>
+	<date>2025-07-06T16:17:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -1817,6 +1819,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.5.12</string>
+	<string>3.5.14</string>
 </dict>
 </plist>
