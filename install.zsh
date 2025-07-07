@@ -18,7 +18,6 @@ brew install --cask firefox
 # Install Mac Specific Stuff
 brew install iterm2
 brew install --cask amethyst
-brew install --cask xquartz
 
 # Install oh-my-zsh but does not update any .zshrc config file or anything
 if ! [ -d "$HOME/.oh-my-zsh/" ]; then
