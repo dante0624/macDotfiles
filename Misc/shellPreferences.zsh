@@ -7,6 +7,10 @@ alias pip='pip3'
 alias python='python3'
 alias vim='nvim'
 
+# Scripts for quick ISO and epoch timestamps at the command-line
+alias timestamp_now="python $HOME/macDotfiles/Misc/misc_python/timestamp_now.py"
+alias timestamp_convert="python $HOME/macDotfiles/Misc/misc_python/timestamp_convert.py"
+
 # Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
