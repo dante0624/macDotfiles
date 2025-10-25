@@ -45,12 +45,13 @@ Because both of these work at startup time, any modifications require fully clos
 
 ## UserChrome.js
 ### Setting Up
+**Note that there is already a script called setup_autoconfig.sh which does all of this**
 1. First note a base-path of `/Applications/Firefox.app/Contents/Resources/`
-2. Create a symbolc link of config.js into the base-path
+2. Create a symbolic link of config.js into the base-path
 3. Use `mkdir` (if needed) to create the sub-path: `defaults/pref`
 4. Create a symbolic link of autoconfig.js into this sub-path
 
-### Debugging Interal Firefox Keyboard Shortcuts
+### Debugging Internal Firefox Keyboard Shortcuts
 * Go to Hamburger menu > More Tools > Browser Toolbox
 * Keyboard Shortcuts
   * In the Inspector, search for #mainKeyset
@@ -76,7 +77,7 @@ Whenever a keyboard shortcut is pressed, it can be consumed by multiple sources 
     - MacOS has its own system for storing keyboard shortcuts per application
     - These can easily be overwritten, but I think that removing them is a little annoying
 
-Will finalize which keyboard shorcuts I use from TST, and ensure they are removed from everything else.
+Will finalize which keyboard shortcuts I use from TST, and ensure they are removed from everything else.
 
 ### Phase 2 - Fix Small Bug in Tree Style Tags Shortcut
 Wrote up a [github issue](https://github.com/piroor/treestyletab/issues/3725) for it.
@@ -95,7 +96,7 @@ I'm planning to use this as justification for just fixing it myself and putting 
 
 ### Phase 4 - Add a Simple Telescope-Style Plugin
 - Expose one command for opening a fuzzyfinder over both bookmarks and open tabs (reads from both sources).
-  - I would like the fuzzyfinder to work similaly to NeoVim's Telescope.
+  - I would like the fuzzyfinder to work similarly to NeoVim's Telescope.
   - It should begin in "insertion mode".
   - After escape is pressed, we are in "normal mode". Here, "j" and "k" can move up an down the query results.
   - Then "i" and "a" move back to "insertion mode" at the end of the current query text.
