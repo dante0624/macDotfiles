@@ -1,4 +1,7 @@
-# Beginning of shellPreferences from macDotfiles
+# Setup Path and other things for homebrew
+# Needed because I install many things with homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Basic aliases
 alias pip='pip3'
 alias python='python3'
