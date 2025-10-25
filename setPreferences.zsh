@@ -4,10 +4,10 @@ if ! [ -f "$HOME/.zshrc" ]; then
 fi
 
 # Tell .zshrc to source a file that has my ZShell Preferences
-shellPreferences="source $HOME/macDotfiles/Misc/shellPreferences.zsh"
-if ! grep -q "$shellPreferences" "$HOME/.zshrc"
+shellPreferencesSourceLine="source \"$HOME/macDotfiles/Misc/shellPreferences.zsh\""
+if ! grep -q "$shellPreferencesSourceLine" "$HOME/.zshrc"
 then
-  echo $shellPreferences >> "$HOME/.zshrc"
+  echo $shellPreferencesSourceLine >> "$HOME/.zshrc"
 fi
 
 # Set up my tmux config
