@@ -43,7 +43,7 @@ function all-windows() {
 
 
 # My Custom Theme, modified colors to mortalscumbag
-# All themes can be found under ~/.oh-my-zsh/themes
+# All themes can be found under $HOME/.oh-my-zsh/themes
 function my_git_prompt() {
   # Returns early if we are not in a git repo
   tester=$(git rev-parse --git-dir 2> /dev/null) || return
