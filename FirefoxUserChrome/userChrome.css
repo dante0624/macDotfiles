@@ -18,3 +18,8 @@ So, collapse the whole thing.
 #sidebar-header {
 	visibility: collapse;
 }
+
+/* On Firefox 144.0, the TST Sidebar header which says "Tree Style Tab". */
+#sidebar-panel-header {
+	visibility: collapse;
+}

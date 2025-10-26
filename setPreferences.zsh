@@ -38,6 +38,9 @@ ln -sf "$HOME/macDotfiles/Misc/ideavim.vim" "$HOME/.ideavimrc"
 # Modify Keyboard Shortcuts -> App Shortcuts -> All Applications
 plutil -convert binary1 -o "$HOME/Library/Preferences/.GlobalPreferences.plist" "$HOME/macDotfiles/Preferences/globalPreferences.xml"
 
+# Modify Keyboard Shortcuts -> App Shortcuts -> Firefox
+plutil -convert binary1 -o "$HOME/Library/Preferences/org.mozilla.firefox.plist" "$HOME/macDotfiles/Preferences/firefoxPreferences.xml"
+
 # Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control)
 plutil -convert binary1 -o "$HOME/Library/Preferences/com.apple.symbolichotkeys.plist" "$HOME/macDotfiles/Preferences/hotKeys.xml"
 

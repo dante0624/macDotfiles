@@ -21,6 +21,8 @@ The specific settings which it synchronizes are primarily aimed at making keyboa
   * A hacked nerd font
   * `fd` and `ripgrep` (for telescope)
 * Installs neovim
+* Installs tmux
+* Installs Firefox
 * Installs iTerm2
 * Installs amethyst
 * Installs oh-my-zsh

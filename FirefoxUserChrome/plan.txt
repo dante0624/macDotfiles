@@ -6,17 +6,16 @@ Overall:
 Wish List:
 	Firefox Defaults:
 		Toggle Reader View - Accel + E
+		Toggle Sidebar - Accel + S
 	Dark Reader:
-		Toggle Current Site - Accel + D
+		Toggle Current Site - Accel + M
     Tree Style Tabs:
-        Toggle Tabs Sidebar - Accel + M
-        Focus Down - Accel + J
-        Focus Up - Accel + K
-        Focus Left - Accel + H
-        Focus Right - Accel + L
-        Toggle Expand / Collapse Sub Tree - Accel + P
-        Open a Child Tab - Accel + N
-        Reload Sub Tree - Accel, Shift + R
+        Reload This Tree - Accel, Shift + R
+		Toggle Tree Collapsed - Accel + P
+        Focus To Parent Tab - Accel + H
+        Focus To First Child Tab - Accel + L
+        Focus To Previous Sibling Tab - Accel + K
+        Focus To Next Sibling Tab - Accel + J
 	My Version of Harpoon For Tabs:
 		Prefix Key - Accel + O
 			asdfghjkl; should correspond to 10 slots respectively
@@ -32,7 +31,7 @@ Existing Accel Shortcuts:
     A - Select All (MacOS)
     B - Bold (Quip)
     C - Copy (MacOS)
-    D - Add Bookmark (Fx, addBookmarkAsKb) - CHANGE ME TO S
+    D - Add Bookmark (Fx, addBookmarkAsKb)
     E - Not Working (Fx, key_findSelection) - REMOVE ME
     F - Find (MacOS)
     G - Duplicate of Find (Fx, key_findAgain) - REMOVE ME
@@ -42,7 +41,7 @@ Existing Accel Shortcuts:
     K - Focus Search Bar (Fx, key_search) - REMOVE ME
     L - Focus Search Bar Duplicate (Fx, focusURLBar) - REMOVE ME
     M - Minimize Window (Fx, key_minimizeWindow) - REMOVE ME
-    N - New Firefox Window (Fx, key_newNavigator) - REMOVE ME
+    N - New Firefox Window (Fx, key_newNavigator)
     O - Open File From Disk (Fx, openFileKb) - REMOVE ME
     P - Print (Fx, printKb) - REMOVE ME
     Q - Quit Firefox (Fx, key_quitApplication)
