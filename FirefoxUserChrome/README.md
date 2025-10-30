@@ -44,6 +44,10 @@ These will specifically be used to easily navigate tabs like vim.
 
 ### Miscellaneous TST Configurations
 1. First, TST needs to be installed
+1. Next, disable Firefox's builtin sidebar
+    1. Go to `about:preferences` (the URL) -> `Browser Layout` -> Uncheck `Show sidebar`
+    1. This will get rid of an extra div on the left side which allows for choosing between tabs, history, bookmarks, or AI.
+    1. I prefer to not use this, and have the tabs be the only thing on the left side.
 1. Add a bookmark whose name is `Group` and URL is `about:treestyletab-group`
     1. This is very useful for creating a tab whose only job is to be a parent for other tabs
 1. Go through the steps of modifying the `userChrome.css`

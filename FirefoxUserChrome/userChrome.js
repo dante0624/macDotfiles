@@ -38,11 +38,13 @@
           document.getElementById(keyId).remove();
         }
 
+        // Uncomment this is you prefer `about:preferences` (go to URL) -> Browser Layout -> Show sidebar
+
         // Remap "Toggle Sidebar" from control + Z to accel + S.
-        const toggleSidebar = document.getElementById("toggleSidebarKb");
-        toggleSidebar.setAttribute("modifiers", "accel");
-        toggleSidebar.setAttribute("key", "S");
-        toggleSidebar.setAttribute("data-l10n-id", "toggle-sidebar-shortcut-MODIFIED");
+        // const toggleSidebar = document.getElementById("toggleSidebarKb");
+        // toggleSidebar.setAttribute("modifiers", "accel");
+        // toggleSidebar.setAttribute("key", "S");
+        // toggleSidebar.setAttribute("data-l10n-id", "toggle-sidebar-shortcut-MODIFIED");
 
         // Remap ToggleReaderView from accel,alt + R to accel + E because I want to use it often.
         const toggleReaderView = document.getElementById("key_toggleReaderMode");

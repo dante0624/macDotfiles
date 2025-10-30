@@ -6,10 +6,10 @@ Overall:
 Wish List:
 	Firefox Defaults:
 		Toggle Reader View - Accel + E
-		Toggle Sidebar - Accel + S
 	Dark Reader:
 		Toggle Current Site - Accel + M
     Tree Style Tabs:
+		Toggle "Tree Style Tab" Sidebar - Accel + S
         Reload This Tree - Accel, Shift + R
 		Toggle Tree Collapsed - Accel + P
         Focus To Parent Tab - Accel + H
