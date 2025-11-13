@@ -54,6 +54,7 @@ These will specifically be used to easily navigate tabs like vim.
 1. Go through the steps of modifying the `userChrome.js` (just run a single shell script)
     1. After this, restart Firefox
     1. Then update keyboard shortcuts within the TST extension based on the `plan.txt` file in this directory
+1. Download TamperMonkey and add the script within this directory to disallow certain sites from using these keyboard shortcuts.
 1. [If Desired] Bookmarks can be configured to only show up on new tabs
     1. Set View -> Toolbars -> Bookmarks Toolbar -> Only Show on New Tab
     1. Next, deactivate a TST feature which does not play nicely with "Only Show on New Tab"
