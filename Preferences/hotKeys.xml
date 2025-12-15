@@ -14,7 +14,7 @@
 				<array>
 					<integer>97</integer>
 					<integer>0</integer>
-					<integer>1179648</integer>
+					<integer>1966080</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -30,7 +30,7 @@
 				<array>
 					<integer>115</integer>
 					<integer>1</integer>
-					<integer>1179648</integer>
+					<integer>1966080</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -46,7 +46,7 @@
 				<array>
 					<integer>100</integer>
 					<integer>2</integer>
-					<integer>1179648</integer>
+					<integer>1966080</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -62,7 +62,7 @@
 				<array>
 					<integer>102</integer>
 					<integer>3</integer>
-					<integer>1179648</integer>
+					<integer>1966080</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -77,8 +77,72 @@
 				<key>parameters</key>
 				<array>
 					<integer>103</integer>
+					<integer>5</integer>
+					<integer>1966080</integer>
+				</array>
+				<key>type</key>
+				<string>standard</string>
+			</dict>
+		</dict>
+		<key>123</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>value</key>
+			<dict>
+				<key>parameters</key>
+				<array>
+					<integer>104</integer>
 					<integer>4</integer>
-					<integer>1179648</integer>
+					<integer>1966080</integer>
+				</array>
+				<key>type</key>
+				<string>standard</string>
+			</dict>
+		</dict>
+		<key>124</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>value</key>
+			<dict>
+				<key>parameters</key>
+				<array>
+					<integer>106</integer>
+					<integer>38</integer>
+					<integer>1966080</integer>
+				</array>
+				<key>type</key>
+				<string>standard</string>
+			</dict>
+		</dict>
+		<key>125</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>value</key>
+			<dict>
+				<key>parameters</key>
+				<array>
+					<integer>107</integer>
+					<integer>40</integer>
+					<integer>1966080</integer>
+				</array>
+				<key>type</key>
+				<string>standard</string>
+			</dict>
+		</dict>
+		<key>126</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>value</key>
+			<dict>
+				<key>parameters</key>
+				<array>
+					<integer>108</integer>
+					<integer>37</integer>
+					<integer>1966080</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -243,14 +307,14 @@
 		<key>79</key>
 		<dict>
 			<key>enabled</key>
-			<false/>
+			<true/>
 			<key>value</key>
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
-					<integer>123</integer>
-					<integer>8650752</integer>
+					<integer>104</integer>
+					<integer>4</integer>
+					<integer>1179648</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -259,7 +323,7 @@
 		<key>80</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>value</key>
 			<dict>
 				<key>parameters</key>
@@ -275,14 +339,14 @@
 		<key>81</key>
 		<dict>
 			<key>enabled</key>
-			<false/>
+			<true/>
 			<key>value</key>
 			<dict>
 				<key>parameters</key>
 				<array>
-					<integer>65535</integer>
-					<integer>124</integer>
-					<integer>8650752</integer>
+					<integer>108</integer>
+					<integer>37</integer>
+					<integer>1179648</integer>
 				</array>
 				<key>type</key>
 				<string>standard</string>
@@ -291,7 +355,7 @@
 		<key>82</key>
 		<dict>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>value</key>
 			<dict>
 				<key>parameters</key>
