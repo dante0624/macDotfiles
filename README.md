@@ -25,8 +25,7 @@ The specific settings which it synchronizes are primarily aimed at making keyboa
 * Installs Firefox
 * Installs iTerm2
 * Installs amethyst
-* Installs oh-my-zsh
-  * Critically however, it does not modify `$HOME/.zshrc` file at all
+* Installs fish
 
 ### setPreferences.zsh
 * Modifies several plist files within `$HOME/Library/Preferences`
@@ -35,7 +34,7 @@ The specific settings which it synchronizes are primarily aimed at making keyboa
 * Clone's my neovim config from github into the correct location
 * Makes `vim` an alias for `nvim`
 * Makes neovim the default git editor
-* Adds oh-my-zsh configuration to `$HOME/.zshrc`
+* Makes fish the default shell, and configures it to look nice and work with git
 * Caveats:
   * For updates to iTerm2 to work, the script must be called from some other terminal (like the built-in terminal)
   * Additionally, for most MacOS settings changes to be observed, the computer should be restarted after running.

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Installs a nerd font
 brew install font-hack-nerd-font
 
@@ -18,9 +20,5 @@ brew install --cask firefox
 brew install --cask iterm2
 brew install --cask amethyst
 
-# Install oh-my-zsh but does not update any .zshrc config file or anything
-if ! [ -d "$HOME/.oh-my-zsh/" ]; then
-	sh "$HOME/macDotfiles/Misc/omzInstaller.sh" --unattended --keep-zshrc
-else
-	echo "Oh-my-zsh already installed at $HOME/.oh-my-zsh/"
-fi
+# Install fish
+brew install fish

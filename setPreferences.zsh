@@ -1,15 +1,26 @@
-#  Make sure that .zshrc file exists, as we may add things to it
-if ! [ -f "$HOME/.zshrc" ]; then
-	echo "Creating new .zshrc file in $HOME"
-	touch "$HOME/.zshrc"
+#!/bin/zsh
+
+# Make fish the default shell
+# Use zsh for this script because it is needed for bootstrapping
+fishPath="/opt/homebrew/bin/fish"
+if ! grep -q "$fishPath" "/etc/shells"
+then
+  echo "Adding $fishPath to /etc/shells"
+  echo $fishPath | sudo tee -a "/etc/shells"
 fi
 
-# Tell .zshrc to source a file that has my ZShell Preferences
-shellPreferencesSourceLine="source \"$HOME/macDotfiles/Misc/shellPreferences.zsh\""
-if ! grep -q "$shellPreferencesSourceLine" "$HOME/.zshrc"
+if [ $(echo $SHELL) != $fishPath ]
 then
-  echo "Adding line to $HOME/.zsrhc to source my shell preferences"
-  echo $shellPreferencesSourceLine >> "$HOME/.zshrc"
+	echo "Setting default shell to fish"
+	chsh -s $fishPath
+fi
+
+# Tell fish to source a file that has my Shell Preferences
+shellPreferencesSourceLine="source \"$HOME/macDotfiles/Misc/shellPreferences.fish\""
+if ! grep -q "$shellPreferencesSourceLine" "$HOME/.config/fish/config.fish"
+then
+  echo "Adding line to $HOME/.config/fish/config.fish to source my shell preferences"
+  echo $shellPreferencesSourceLine >> "$HOME/.config/fish/config.fish"
 fi
 
 # Set up my tmux config
