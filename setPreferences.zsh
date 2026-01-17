@@ -56,7 +56,7 @@ plutil -convert binary1 -o "$HOME/Library/Preferences/.GlobalPreferences.plist" 
 # Modify Keyboard Shortcuts -> App Shortcuts -> Firefox
 plutil -convert binary1 -o "$HOME/Library/Preferences/org.mozilla.firefox.plist" "$HOME/macDotfiles/Preferences/firefoxPreferences.xml"
 
-# Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control)
+# Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control, Spotlight)
 plutil -convert binary1 -o "$HOME/Library/Preferences/com.apple.symbolichotkeys.plist" "$HOME/macDotfiles/Preferences/hotKeys.xml"
 
 # Set iTerm Preferences
