@@ -112,7 +112,7 @@ func addLenientShortcut(_ beforeState: StateMachineState, _ keycode: Int, _ oper
 addLenientShortcut(.selectApplication, kVK_ANSI_M, { openApplication("Microsoft Outlook") }) // M for mail or meetings
 addLenientShortcut(.selectApplication, kVK_ANSI_S, { openApplication("Slack") })
 addLenientShortcut(.selectApplication, kVK_ANSI_F, { openApplication("Firefox") })
-addLenientShortcut(.selectApplication, kVK_ANSI_E, { openApplication("iTerm2") }) // E for "editor"
+addLenientShortcut(.selectApplication, kVK_ANSI_E, { openApplication("WezTerm") }) // E for "editor"
 
 // This one works, but for some reason not when zoom is in fullscreen
 addLenientShortcut(.selectApplication, kVK_ANSI_Z, { openApplication("zoom.us") })

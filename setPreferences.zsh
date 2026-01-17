@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Setup wezterm config
+ln -sf "$HOME/macDotfiles/Misc/wezterm" "$HOME/.config/wezterm"
+
 # Make fish the default shell
 # Use zsh for this script because it is needed for bootstrapping
 fishPath="/opt/homebrew/bin/fish"
@@ -22,11 +25,6 @@ then
   echo "Adding line to $HOME/.config/fish/config.fish to source my shell preferences"
   echo $shellPreferencesSourceLine >> "$HOME/.config/fish/config.fish"
 fi
-
-# Set up my tmux config
-echo "Setting up tmux config"
-mkdir -p "$HOME/.config/tmux"
-ln -sf "$HOME/macDotfiles/Misc/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
 # Set up my neovim config
 if [ ! -e "$HOME/.config/nvim/init.lua" ]
@@ -58,16 +56,6 @@ plutil -convert binary1 -o "$HOME/Library/Preferences/org.mozilla.firefox.plist"
 
 # Modify Keyboard Shortcuts -> (LaunchPad & Doc, Mission Control, Spotlight)
 plutil -convert binary1 -o "$HOME/Library/Preferences/com.apple.symbolichotkeys.plist" "$HOME/macDotfiles/Preferences/hotKeys.xml"
-
-# Set iTerm Preferences
-# This shell script must be called from something other than iterm itself!!!
-plutil -convert binary1 -o "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "$HOME/macDotfiles/Preferences/itermPreferences.xml"
-# Iterm keeps its prefernces in RAM and when you close iTerm they get written
-
-# So if you open iTerm, run this script, then close iTerm it will:
-# 1. loads the default settings from the hard drive into RAM
-# 2. A user runs the script, which updates only the hard drive
-# 3. iTerm closes and saves the default settings back onto the hard drive
 
 # Set Amethyst preferences
 plutil -convert binary1 -o "$HOME/Library/Preferences/com.amethyst.Amethyst.plist" "$HOME/macDotfiles/Preferences/amethystPreferences.xml"

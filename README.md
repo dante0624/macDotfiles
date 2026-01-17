@@ -7,7 +7,7 @@ The specific settings which it synchronizes are primarily aimed at making keyboa
 ## Bootstrapping a brand-new Macbook
 * Install homebrew and git
 * Use Mac's built-in terminal application
-  * Use this because iTerm2 is going to be installed and then configured
+  * Use this because WezTerm is going to be installed and then configured
 * Clone the repo into `$HOME` directory
   * This is necessary because other symlinks and scripts will assume that these files can be found in this location
 * `cd` into that new directory.
@@ -16,25 +16,30 @@ The specific settings which it synchronizes are primarily aimed at making keyboa
 
 ## The Scripts
 ### install.zsh
-* Preforms almost all installations using homebrew, so ensure that `brew ` is installed.
-* Installs all dependencies for neovim
-  * A hacked nerd font
+* Preforms almost all installations using homebrew, so ensure that `brew` is installed.
+* Installs Amethyst
+* Installs dependencies for neovim
   * `fd` and `ripgrep` (for telescope)
-* Installs neovim
-* Installs tmux
-* Installs Firefox
-* Installs iTerm2
-* Installs amethyst
+* Installs WezTerm
 * Installs fish
+* Installs neovim
+* Installs Firefox
 
 ### setPreferences.zsh
+* Configures WezTerm display and keyboard shortcuts
+* Makes fish the default shell and configures the shell:
+  * Tweaks appearances, like the colors, shell prompt, and git prompt
+  * Sets up aliases / fish functions
+* Clone's my neovim config from github into the correct location
+* Makes neovim the default git editor
 * Modifies several plist files within `$HOME/Library/Preferences`
   * These update mac specific settings and keybindings
-  * Also updates settings and keybindings for iTerm2 and amethyst
-* Clone's my neovim config from github into the correct location
-* Makes `vim` an alias for `nvim`
-* Makes neovim the default git editor
-* Makes fish the default shell, and configures it to look nice and work with git
+  * Also updates settings and keybindings for Amethyst and Firefox
+* Compiles and sets up a swift script for quickly selecting windows called `my-window-selector`
+* Sets up Launch Agents, so that certain actions are taken when the Macbook restarted
 * Caveats:
-  * For updates to iTerm2 to work, the script must be called from some other terminal (like the built-in terminal)
-  * Additionally, for most MacOS settings changes to be observed, the computer should be restarted after running.
+  * MacOS settings changes to be observed, the computer should be restarted after running.
+  * For `my-window-selector`, the bootstrapping process is extra annoying:
+    * First the app must be given permissions
+    * Then the Launch Agent must re-start its attempt at running the application
+
