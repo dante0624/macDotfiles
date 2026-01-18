@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Setup wezterm config
-ln -sf "$HOME/macDotfiles/Misc/wezterm" "$HOME/.config/wezterm"
+ln -sf "$HOME/macDotfiles/Misc/wezterm" "$HOME/.config/"
 
 # Make fish the default shell
 # Use zsh for this script because it is needed for bootstrapping
