@@ -5,15 +5,19 @@ local wezterm = require('wezterm')
 2. Display the current workspace name in the top-right corner
 ]]
 local M = {
-	-- Bootstrap both to the current workspace when Wezterm starts
-	current = wezterm.mux.get_active_workspace(),
-	prior = wezterm.mux.get_active_workspace(),
-
+	current = nil,
+	prior = nil,
 }
 
 wezterm.on('update-right-status', function(window, _)
 	local active_workspace_name = window:active_workspace()
 	window:set_right_status(active_workspace_name .. '    ')
+
+	-- Initialize on first run
+	if M.current == nil then
+		M.current = active_workspace_name
+		M.prior = active_workspace_name
+	end
 
 	if active_workspace_name ~= M.current then
 		M.prior = M.current

@@ -45,6 +45,21 @@ local keys = {
 
 	-- Tabs
 	{
+		key = 't', -- For always opening a tab in the local domain
+		mods = 'CMD',
+		action = wezterm.action.SpawnTab({ DomainName = 'local-domain' })
+	},
+	{
+		key = 't', -- For always opening a tab in remote domain
+		mods = 'CMD|SHIFT',
+		action = wezterm.action.SpawnTab({ DomainName = 'custom_ssh_domain' })
+	},
+	{
+		key = 't', -- Opens a tab, copying the domain and directory of the current pane
+		mods = 'LEADER',
+		action = wezterm.action.SpawnTab( "CurrentPaneDomain" )
+	},
+	{
 		key = 'o', -- For "open" a tab
 		mods = 'CMD',
 		action = wezterm.action.ActivateKeyTable({ name = 'activate_tab' }),
@@ -52,9 +67,18 @@ local keys = {
 	{
 		key = 'e', -- No explanation, just matches the neovim config
 		mods = 'LEADER',
-		-- Asks to confirm if the process it is closing isn't in this list:
-		-- https://wezterm.org/config/lua/config/skip_close_confirmation_for_processes_named.html
-		action = wezterm.action.CloseCurrentTab({ confirm = true }),
+		action = wezterm.action.CloseCurrentTab({
+			--[[ Ideally, I would have the confirmation be custom via either of:
+			1. https://wezterm.org/config/lua/config/skip_close_confirmation_for_processes_named.html
+			2. https://wezterm.org/config/lua/mux-events/mux-is-process-stateful.html
+
+			However, these features are currently broken when using domains, as per:
+			1. https://github.com/wezterm/wezterm/issues/1224#issuecomment-997334994
+			2. https://github.com/wezterm/wezterm/issues/6097
+
+			So, the best thing I can do is just have the keyboard shortcut never prompt me]]
+			confirm = false,
+		}),
 	},
 	{
 		key = 'LeftArrow',
