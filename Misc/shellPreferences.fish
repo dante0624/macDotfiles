@@ -16,10 +16,12 @@ set fish_prompt_pwd_dir_length 0
 set -U fish_greeting
 
 # Choosing fish theme and colors
-fish_config theme choose ayu-mirage
+fish_config theme choose "ayu Mirage"
 set fish_color_user "brcyan"
 set fish_color_host "0085FB"
+set fish_color_host_remote "C03030"
 set fish_color_cwd "normal"
+set fish_pager_color_selected_background "--background=004D26"
 
 # Enable showing a bunch of stuff on the fish prompt for git
 set __fish_git_prompt_showcolorhints 1
