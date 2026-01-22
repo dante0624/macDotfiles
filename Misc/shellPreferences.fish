@@ -52,7 +52,7 @@ set __fish_git_prompt_color_branch "AE00FF"
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit -m'
-alias gca='git commit --amend'
+alias gca='git commit --amend --no-edit'
 alias gco='git checkout'
 alias gd='git diff'
 function gdh -a commitCount
