@@ -30,8 +30,10 @@ Firefox allows for (but only barely supports) users modifying this chrome at Fir
   - This is more supported by Mozilla.
 - UserChrome.js (very often called autoconfig.js) allows for editing just about anything about Firefox
   - This has much less support from Mozilla.
-  - They encourage using it for just setting preferences
-  - I prefer to use it to change keybindings, since these are also under the Chrome content.
+  - I used to use this for modifying keyboard shortcuts, but it was painful
+  - In Firefox 147 they added support for modifying keyboard shortcuts with a nice UI, and having it save as part of a profile:
+    - https://support.mozilla.org/en-US/kb/customize-keyboard-shortcuts-firefox
+  - I no longer use this for modifying keyboard shortcuts
 
 Because both of these work at startup time, any modifications require fully closing and re-opening Firefox.
 
@@ -39,7 +41,7 @@ Because both of these work at startup time, any modifications require fully clos
 The motivation for modifying the UserChrome is to make it work nicely with Firefox's TST plugin.
 This plugin is the singular reason I use Firefox, as it makes juggling many tabs significantly less stressful.
 The motivation for modifying `userChrome.css` is to remove the tabs from the top and only have them on the sides.
-The motivation for modifying `userChrome.js` is to remove builtin keybindings so they can be used by the TST plugin.
+Removing native keyboard shortcuts is nice  so they can be used by the TST plugin.
 These will specifically be used to easily navigate tabs like vim.
 
 ### Miscellaneous TST Configurations
@@ -50,7 +52,7 @@ These will specifically be used to easily navigate tabs like vim.
     1. I prefer to not use this, and have the tabs be the only thing on the left side.
 1. Add a bookmark whose name is `Group` and URL is `about:treestyletab-group`
     1. This is very useful for creating a tab whose only job is to be a parent for other tabs
-1. Go through the steps of modifying the `userChrome.css`
+1. Go through the steps of modifying the keyboard shortcuts
 1. Go through the steps of modifying the `userChrome.js` (just run a single shell script)
     1. After this, restart Firefox
     1. Then update keyboard shortcuts within the TST extension based on the `plan.txt` file in this directory
@@ -79,18 +81,14 @@ These will specifically be used to easily navigate tabs like vim.
 1. Restart Firefox.
 
 
-## UserChrome.js
-### Setting Up
-**Note that there is already a script called setup_autoconfig.sh which does all of this**
-1. First note a base-path of `/Applications/Firefox.app/Contents/Resources/`
-1. Create a symbolic link of config.js into the base-path
-1. Use `mkdir` (if needed) to create the sub-path: `defaults/pref`
-1. Create a symbolic link of autoconfig.js into this sub-path
-
-### Source of Information (In Order of Helpfulness)
-1. https://superuser.com/questions/1271147/change-key-bindings-keyboard-shortcuts-in-Firefox-57
-1. https://www.userchrome.org/what-is-userchrome-js.html
-1. https://support.mozilla.org/en-US/kb/customizing-Firefox-using-autoconfig
+## Modifying Firefox keyboard shortcuts
+There are a few ways to modify the keyboard shorcuts:
+1. Just go to `about:keyboard` and use the UI
+  - One shortcoming with this is that the default shortcut for "key_search" (CMD+K) is missing from the UI
+  - However, modifying this file has the affect of writing to JSON file called `customKeys.json`, which is found under the profile's `Root Directory`
+  - And we can modify the keyboard shorcuts by modifying this file (see section below)
+2. Manually modify (or copy-paste) the `customKeysCopy.json` file from here into `customKeys.json` there
+3. Export a profile and import and entier profile into Firefox
 
 ## Plans For Turning Firefox Into Neovim As Much As Possible
 ### Phase 1 - Finalize the Existing Extension Shortcuts
